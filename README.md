@@ -1,6 +1,6 @@
 # GameDesign
 
-# Team composition: 
+Team composition: 
 
 Platon Victor-Ionut
 
