@@ -1,10 +1,15 @@
 # GameDesign
 
-Team composition: Platon Victor-Ionut
+# Team composition: 
 
-Type of game you intend to implement: casual, first person, 3d, low-medium poly game for PC
+Platon Victor-Ionut
+
+Type of game you intend to implement:
+
+casual, first person, 3d, low-medium poly game for PC
 
 A one paragraph description of the core gameplay of your game:
+
 The player will be put in a first person perspective where he can teleport between islands, each with their own gameplay and things he can do, but that are connected via resources that he can gather from the specific activites he can do. Each island will also have an achivement system to encourage the player to at least try it, but he can stick with the one he enjoys the most. The purpose of the game is to allow casual gamers, and maybe others, to enjoy a nice, "cosy" experience in with they don't have to worry about health bars, enemies, etc. and just enjoy the game at their own pace doing things that maybe will help them relax and have a good time (cooking, hunting, fishing, maybe more...)
 
 If applicable, links to similar concepts:
