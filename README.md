@@ -20,3 +20,7 @@ My Oasis: Calming, Relaxing & Anxiety Relief Game: https://play.google.com/store
 What Remains of Edith Finch: https://store.steampowered.com/app/501300/What_Remains_of_Edith_Finch/ -first person, casual, story driven game
 
 Among Trees: https://www.epicgames.com/store/en-US/product/among-trees/home
+
+
+Week4:
+In the 4th week I made the base of the game, with 2 diffrent mechanics. The player can now move freely in an environment that will later be stylised. The player can now harvest resources and attack with balls that can be charged.
