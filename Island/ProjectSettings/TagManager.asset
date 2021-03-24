@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Harvest
+  - Foundation_SP
+  - Wall_SP
+  - Ceiling_SP
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - Player
   - Ground
-  - 
+  - Build_layer
   - 
   - 
   - 
