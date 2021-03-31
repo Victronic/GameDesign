@@ -17,6 +17,7 @@ public class PlayerMovementScript : MonoBehaviour
     Vector3 velocity;
     bool isGorunded;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -41,5 +42,17 @@ public class PlayerMovementScript : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (Cursor.lockState == CursorLockMode.Confined)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+        }
     }
 }

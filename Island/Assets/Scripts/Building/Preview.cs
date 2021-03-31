@@ -11,6 +11,7 @@ public class Preview : MonoBehaviour
     public Material badMat;
 
     private BuildSystem buildSystem;
+    
 
     private bool isSnapped = false;
     public bool isFoundation = false;

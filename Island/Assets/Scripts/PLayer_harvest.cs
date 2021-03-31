@@ -7,6 +7,7 @@ public class PLayer_harvest : MonoBehaviour
     public Camera cam;
     public Transform hand;
     public float interactDist = 10f;
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,20 @@ public class PLayer_harvest : MonoBehaviour
     void Update()
     {
         DoInteraction();
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray,out hit, 100))
+            {
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    panel.SetActive(!panel.activeSelf);
+                }
+            }
+        }
     }
 
     private void DoInteraction()
