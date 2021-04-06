@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, IItemContainer
 { 
     [SerializeField] List<Item> startingItems;
     [SerializeField] Transform itemsParent;
@@ -87,5 +87,30 @@ public class Inventory : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public bool ContainsItem(Item item)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].Item == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int ItemCount(Item item)
+    {
+        int number = 0;
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].Item == item)
+            {
+                number++;
+            }
+        }
+        return number;
     }
 }

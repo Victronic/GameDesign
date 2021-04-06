@@ -7,8 +7,6 @@ public class InventoryInput : MonoBehaviour
     [SerializeField] KeyCode[] toggleCharacterPanelKeys;
     [SerializeField] KeyCode[] toggleInventoryKeys;
 
-
-
     // Update is called once per frame
     void Update()
     {
