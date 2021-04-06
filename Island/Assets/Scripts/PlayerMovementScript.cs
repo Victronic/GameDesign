@@ -43,7 +43,7 @@ public class PlayerMovementScript : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        /*if (Input.GetKeyDown(KeyCode.Z))
         {
             if (Cursor.lockState == CursorLockMode.Confined)
             {
@@ -53,6 +53,6 @@ public class PlayerMovementScript : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Confined;
             }
-        }
+        }*/
     }
 }
