@@ -26,11 +26,11 @@ public class ItemChest : MonoBehaviour
     }
     private void Update()
     {
-        if (isInRange && Input.GetKeyDown(itemPickupKeycode))
+        if (isInRange && !isEmpty && Input.GetKeyDown(itemPickupKeycode))
         {
             if (!isEmpty)
             {
-                inventory.AddItem(item);
+                inventory.AddItem(Instantiate(item));
                 isEmpty = true;
                 spriteRenderer.color = emptyColor;
             }
