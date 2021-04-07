@@ -14,15 +14,17 @@ public class ItemToolTip : MonoBehaviour
         ItemSlotText.text = item.EquipmentType.ToString();
 
         sb.Length = 0;
-        AddStat(item.StrengthBonus, "Strength");
-        AddStat(item.IntelligenceBonus, "Intelligence");
-        AddStat(item.AgilityBonus, "Agility");
-        AddStat(item.VitalityBonus, "Vitality");
+        AddStat(item.ChoppBonus, "Chopp");
+        AddStat(item.CutBonus, "Mining");
+        AddStat(item.MiningBonus, "Cut");
+        AddStat(item.HuntBonus, "Hunt");
+        AddStat(item.FishingBonus, "Fishing");
 
         AddStat(item.StrengthPrecentBonus, "Strength", isPrecent: true);
-        AddStat(item.IntelligencePrecentBonus, "Intelligence", isPrecent: true);
-        AddStat(item.AgilityPrecentBonus, "Agility", isPrecent: true);
-        AddStat(item.VitalityPrecentBonus, "Vitality", isPrecent: true);
+        AddStat(item.CutPrecentBonus, "Mining", isPrecent: true);
+        AddStat(item.MiningPrecentBonus, "Cut", isPrecent: true);
+        AddStat(item.HuntPrecentBonus, "Hunt", isPrecent: true);
+        AddStat(item.FishingPrecentBonus, "Fishing", isPrecent: true);
 
         ItemStatsText.text = sb.ToString();
 

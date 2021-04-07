@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711f8eab1e516d04a98d123ea770845a, type: 3}
-  m_Name: Axe
+  m_Name: Fishing-Rod
   m_EditorClassIdentifier: 
-  id: efb819c2cda79e14a96b84189cf643ba
-  ItemName: Axe
+  id: 25e2af573c3c3b443b8ee2b58c62bbe5
+  ItemName: FishingItem
   MaximumStacks: 1
-  Icon: {fileID: 21300000, guid: c6caf4012febcc24d9c0f365e0f71d38, type: 3}
-  ChoppBonus: 1
+  Icon: {fileID: 21300000, guid: 48ccbc4c356d2e5449abf6ffe02b94a0, type: 3}
+  ChoppBonus: 0
   MiningBonus: 0
   CutBonus: 0
   HuntBonus: 0
-  FishingBonus: 0
+  FishingBonus: 1
   StrengthPrecentBonus: 0
   MiningPrecentBonus: 0
   CutPrecentBonus: 0

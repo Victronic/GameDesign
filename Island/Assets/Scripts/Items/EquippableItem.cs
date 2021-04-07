@@ -15,16 +15,19 @@ public enum EquipmentType
 [CreateAssetMenu]
 public class EquippableItem : Item
 {
-    public int StrengthBonus;
-    public int AgilityBonus;
-    public int IntelligenceBonus;
-    public int VitalityBonus;
+    public int ChoppBonus;
+    public int MiningBonus;
+    public int CutBonus;
+    public int HuntBonus;
+    public int FishingBonus;
     [Space]
     public int StrengthPrecentBonus;
-    public int AgilityPrecentBonus;
-    public int IntelligencePrecentBonus;
-    public int VitalityPrecentBonus;
+    public int MiningPrecentBonus;
+    public int CutPrecentBonus;
+    public int HuntPrecentBonus;
+    public int FishingPrecentBonus;
     [Space]
+    public int Durability=10;
     public EquipmentType EquipmentType;
 
     public override Item GetCopy()
@@ -39,31 +42,35 @@ public class EquippableItem : Item
 
     public void Equip(Character c)
     {
-        if (StrengthBonus != 0)
-            c.Strength.AddModifier(new StatModifier(StrengthBonus, StatModType.Flat, this));
-        if (AgilityBonus != 0)
-            c.Agility.AddModifier(new StatModifier(AgilityBonus, StatModType.Flat, this));
-        if (IntelligenceBonus != 0)
-            c.Intelligence.AddModifier(new StatModifier(IntelligenceBonus, StatModType.Flat, this));
-        if (VitalityBonus != 0)
-            c.Vitality.AddModifier(new StatModifier(VitalityBonus, StatModType.Flat, this));
+        if (ChoppBonus != 0)
+            c.ChopPower.AddModifier(new StatModifier(ChoppBonus, StatModType.Flat, this));
+        if (MiningBonus != 0)
+            c.MiningPower.AddModifier(new StatModifier(MiningBonus, StatModType.Flat, this));
+        if (CutBonus != 0)
+            c.CutPower.AddModifier(new StatModifier(CutBonus, StatModType.Flat, this));
+        if (HuntBonus != 0)
+            c.HuntPower.AddModifier(new StatModifier(HuntBonus, StatModType.Flat, this));
+        if (FishingBonus != 0)
+            c.FishingPower.AddModifier(new StatModifier(FishingBonus, StatModType.Flat, this));
 
         if (StrengthPrecentBonus != 0)
-            c.Strength.AddModifier(new StatModifier(StrengthPrecentBonus, StatModType.PrecentMult, this));
-        if (AgilityPrecentBonus != 0)
-            c.Agility.AddModifier(new StatModifier(AgilityPrecentBonus, StatModType.PrecentMult, this));
-        if (IntelligencePrecentBonus != 0)
-            c.Intelligence.AddModifier(new StatModifier(IntelligencePrecentBonus, StatModType.PrecentMult, this));
-        if (VitalityPrecentBonus != 0)
-            c.Vitality.AddModifier(new StatModifier(VitalityPrecentBonus, StatModType.PrecentMult, this));
+            c.ChopPower.AddModifier(new StatModifier(StrengthPrecentBonus, StatModType.PrecentMult, this));
+        if (MiningPrecentBonus != 0)
+            c.MiningPower.AddModifier(new StatModifier(MiningPrecentBonus, StatModType.PrecentMult, this));
+        if (CutPrecentBonus != 0)
+            c.CutPower.AddModifier(new StatModifier(CutPrecentBonus, StatModType.PrecentMult, this));
+        if (HuntPrecentBonus != 0)
+            c.HuntPower.AddModifier(new StatModifier(HuntPrecentBonus, StatModType.PrecentMult, this));
+        if (FishingBonus != 0)
+            c.FishingPower.AddModifier(new StatModifier(FishingPrecentBonus, StatModType.PrecentMult, this));
     }
 
     public void Unequip(Character c)
     {
-        c.Strength.RemoveAllModifiersFromSource(this);
-        c.Agility.RemoveAllModifiersFromSource(this);
-        c.Intelligence.RemoveAllModifiersFromSource(this);
-        c.Vitality.RemoveAllModifiersFromSource(this);
+        c.ChopPower.RemoveAllModifiersFromSource(this);
+        c.MiningPower.RemoveAllModifiersFromSource(this);
+        c.CutPower.RemoveAllModifiersFromSource(this);
+        c.HuntPower.RemoveAllModifiersFromSource(this);
+        c.FishingPower.RemoveAllModifiersFromSource(this);
     }
-
 }

@@ -8,6 +8,10 @@ public class ArrowScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        
+
+            if (col.GetComponent<EnemyStat>()){
+                EnemyStat stats = col.GetComponent<EnemyStat>();
+                stats.Hit(damage);
+            }
     }
 }

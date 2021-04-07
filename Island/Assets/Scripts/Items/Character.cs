@@ -3,10 +3,11 @@ using UnityEngine.UI;
 using Victor.CharacterStats;
 public class Character : MonoBehaviour
 {
-    public CharacterStat Strength;
-    public CharacterStat Agility;
-    public CharacterStat Intelligence;
-    public CharacterStat Vitality;
+    public CharacterStat ChopPower;
+    public CharacterStat MiningPower;
+    public CharacterStat CutPower;
+    public CharacterStat HuntPower;
+    public CharacterStat FishingPower;
 
     [SerializeField] Inventory inventory;
     [SerializeField] EquipmentPanel equipmentPanel;
@@ -26,7 +27,7 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        statPanel.SetStats(Strength, Agility, Intelligence, Vitality);
+        statPanel.SetStats(ChopPower, MiningPower, CutPower, HuntPower,FishingPower);
         statPanel.UpdateStatValue();
 
         //Setup Events:
