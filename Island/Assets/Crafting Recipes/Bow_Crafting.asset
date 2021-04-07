@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e1c49204093e84280e5eb668442ffc, type: 3}
+  m_Name: Bow_Crafting
+  m_EditorClassIdentifier: 
+  Materials:
+  - Item: {fileID: 11400000, guid: cfc81d2b1c15de44eade4edd14b94d3c, type: 2}
+    Amount: 1
+  - Item: {fileID: 11400000, guid: 7b7edaf01eb083343ac3182f54f5e404, type: 2}
+    Amount: 1
+  - Item: {fileID: 11400000, guid: 0eb03d25582f0534a99ca68dd8c217fd, type: 2}
+    Amount: 1
+  Results:
+  - Item: {fileID: 11400000, guid: e0c8e15a6263dd048a38ae28d6c6b3c0, type: 2}
+    Amount: 1
