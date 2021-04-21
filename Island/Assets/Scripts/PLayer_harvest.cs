@@ -18,7 +18,7 @@ public class PLayer_harvest : MonoBehaviour
     void Update()
     {
         DoInteraction();
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

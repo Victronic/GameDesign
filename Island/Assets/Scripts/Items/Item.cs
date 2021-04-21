@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using System.Text;
+
 [CreateAssetMenu]
 public class Item : ScriptableObject
 {
@@ -7,8 +9,10 @@ public class Item : ScriptableObject
     public string ID { get { return id; } }
     public string ItemName;
     [Range(1, 999)]
-    public int MaximumStacks = 1; 
+    public int MaximumStacks = 1;
     public Sprite Icon;
+
+    protected static readonly StringBuilder sb = new StringBuilder();
 
     private void OnValidate()
     {
@@ -24,5 +28,14 @@ public class Item : ScriptableObject
     public virtual void Destroy()
     {
 
+    }
+
+    public virtual string GetItemType()
+    {
+        return "";
+    }
+    public virtual string GetDescription()
+    {
+        return "";
     }
 }
