@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
     [SerializeField] StatPanel statPanel;
     [SerializeField] ItemToolTip itemTooltip;
     [SerializeField] Image draggableItem;
+    [SerializeField] DropItemArea dropItemArea;
+    [SerializeField] QuestionDialogue questionDialogue;
 
     private BaseItemSlot draggedSlot;
 
@@ -56,6 +58,7 @@ public class Character : MonoBehaviour
         // Drop
         inventory.OnDropEvent += Drop;
         equipmentPanel.OnDropEvent += Drop;
+        dropItemArea.OnDropEvent += DropItemOutsideUI;
     }
 
     private void InventoryRightClick(BaseItemSlot itemSlot)
@@ -130,6 +133,21 @@ public class Character : MonoBehaviour
 
     }
 
+    private void DropItemOutsideUI()
+    {
+        if (draggedSlot == null) return;
+
+        questionDialogue.Show();
+        BaseItemSlot baseItemSlot = draggedSlot;
+        questionDialogue.OnYesEvent += ()=> DestroyItemSlot(baseItemSlot);
+    }
+
+    public void DestroyItemSlot(BaseItemSlot baseItemSlot)
+    {
+        baseItemSlot.Item.Destroy();
+        baseItemSlot.Item = null;
+    }
+
     private void SwapItems(BaseItemSlot dropItemSlot)
     {
         EquippableItem dragItem = draggedSlot.Item as EquippableItem;
@@ -191,11 +209,72 @@ public class Character : MonoBehaviour
 
     public void Unequip(EquippableItem item)
     {
-        if(!inventory.IsFull() && equipmentPanel.RemoveItem(item))
+        if(!inventory.CanAddItem(item) && equipmentPanel.RemoveItem(item))
         {
             item.Unequip(this);
             statPanel.UpdateStatValue();
             inventory.AddItem(item);
         }
+    }
+
+    public void UpdateStatValues()
+    {
+        statPanel.UpdateStatValue();
+    }
+
+    private ItemContainer openItemContainer;
+
+    public void TransferToItemContainer(BaseItemSlot itemSlot)
+    {
+        Item item = itemSlot.Item;
+        if(item!=null && openItemContainer.CanAddItem(item))
+        {
+            inventory.RemoveItem(item);
+            openItemContainer.AddItem(item);
+        }
+    }
+    
+    public void TransferToInventory(BaseItemSlot itemSlot)
+    {
+        Item item = itemSlot.Item;
+        if (item != null && openItemContainer.CanAddItem(item))
+        {
+            openItemContainer.RemoveItem(item);
+            inventory.AddItem(item);
+        }
+    }
+
+    public void OpenItemCotainer(ItemContainer itemContainer)
+    {
+        openItemContainer = itemContainer;
+
+        inventory.OnRightClickEvent -= InventoryRightClick;
+        inventory.OnRightClickEvent += TransferToItemContainer;
+
+        itemContainer.OnRightClickEvent += TransferToInventory;
+
+        itemContainer.OnPointerEnterEvent += ShowTooltip;
+        itemContainer.OnPointerExitEvent += HideTooltip;
+        itemContainer.OnBeginDragEvent += BeginDrag;
+        itemContainer.OnEndDragEvent += EndDrag;
+        itemContainer.OnDragEvent += Drag;
+        itemContainer.OnDropEvent += Drop;
+    }
+
+    public void CloseItemCotainer(ItemContainer itemContainer)
+    {
+        openItemContainer = null;
+
+        inventory.OnRightClickEvent += InventoryRightClick;
+        inventory.OnRightClickEvent -= TransferToItemContainer;
+
+        itemContainer.OnRightClickEvent -= TransferToInventory;
+
+        itemContainer.OnPointerEnterEvent += ShowTooltip;
+        itemContainer.OnPointerExitEvent += HideTooltip;
+        itemContainer.OnBeginDragEvent += BeginDrag;
+        itemContainer.OnEndDragEvent += EndDrag;
+        itemContainer.OnDragEvent += Drag;
+        itemContainer.OnDropEvent += Drop;
     }
 }
