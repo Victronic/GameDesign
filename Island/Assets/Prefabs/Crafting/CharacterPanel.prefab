@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4c94b1253136a43939c9681a48ad32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSlots:
+  ItemSlots:
   - {fileID: 2555634479088186430}
   - {fileID: 2555634478901974196}
   - {fileID: 2555634480232571468}
@@ -4878,7 +4878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentSlotsParent: {fileID: 2555634479668221841}
-  equipmentSlots:
+  EquipmentSlots:
   - {fileID: 2555634479775593912}
   - {fileID: 2555634479721946402}
   - {fileID: 2555634479262377183}
