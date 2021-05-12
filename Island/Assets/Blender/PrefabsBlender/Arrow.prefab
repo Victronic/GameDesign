@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3460490362351686973}
   - component: {fileID: 6897618542597621360}
   - component: {fileID: 6643313108348864460}
+  - component: {fileID: 608182290806332020}
+  - component: {fileID: -1804688550610384407}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -95,11 +97,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8559858222307422334}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 1.0674489}
-  m_Center: {x: 0, y: 0, z: -1.4308097}
+  m_Size: {x: 0.59947026, y: 0.099999934, z: 1.0674487}
+  m_Center: {x: -0.09013222, y: -0.00000018534689, z: -1.43083}
 --- !u!54 &6643313108348864460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,3 +118,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &608182290806332020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559858222307422334}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1159dc2a978fe2e4eb62517d70e42076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootForce: 1000
+--- !u!114 &-1804688550610384407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559858222307422334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540f798fb1568ba46845e1bbc5e8834d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

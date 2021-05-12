@@ -44,6 +44,8 @@ public class Shoot : MonoBehaviour
             SkinnedMeshRenderer _bowSkin = bow.transform.GetComponent<SkinnedMeshRenderer>();
             SkinnedMeshRenderer _arrowSkin = arrow.transform.GetComponent<SkinnedMeshRenderer>();
             Rigidbody _arrowRigidB = arrow.transform.GetComponent<Rigidbody>();
+            ProjectileAddForce _arrowProjectile = arrow.transform.GetComponent<ProjectileAddForce>();
+
             if (Input.GetMouseButton(0))
             {
                 pullAmount += Time.deltaTime * pullSpeed;
@@ -51,16 +53,23 @@ public class Shoot : MonoBehaviour
             }
             if (Input.GetMouseButtonUp(0))
             {
-                pullAmount = 0;
+                
                 arrowSlotted = false;
                 _arrowRigidB.isKinematic = false;
                 arrow.transform.parent = null;
                 numberOfArrows -= 1;
 
+                _arrowProjectile.shootForce = _arrowProjectile.shootForce * ((pullAmount / 100) + .05f);
+
+                pullAmount = 0;
+
+                _arrowProjectile.enabled = true;
+
             }
 
             _bowSkin.SetBlendShapeWeight(0, pullAmount);
             _arrowSkin.SetBlendShapeWeight(0, pullAmount);
+            
             if (Input.GetMouseButtonDown(0) && arrowSlotted == false)
             {
                 SpawnArrow();
