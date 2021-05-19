@@ -22,9 +22,9 @@ public class PointTraker : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ScoreManager.instance.score += value;
-        GameObject _canvas = Instantiate(impactPrefab, other.transform.position, other.transform.rotation);
-        _canvas.GetComponentInChildren<RectTransform>().position = Camera.main.WorldToScreenPoint(other.transform.position);
-        _canvas.GetComponentInChildren<Text>().text = value.ToString();
-        Destroy(_canvas, 2);
+        //GameObject _canvas = Instantiate(impactPrefab, other.transform.position, other.transform.rotation);
+        //_canvas.GetComponentInChildren<RectTransform>().position = Camera.main.WorldToScreenPoint(other.transform.position);
+        //_canvas.GetComponentInChildren<Text>().text = value.ToString();
+        //Destroy(_canvas, 2);
     }
 }
