@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] float pullSpeed;
     [SerializeField] GameObject arrowPrefab;
     [SerializeField] GameObject arrow;
-    [SerializeField] int numberOfArrows = 10;
+    [SerializeField] public int numberOfArrows = 10;
     [SerializeField] GameObject bow;
     
     bool arrowSlotted = false;

@@ -9,9 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform orientation;
 
     [Header("Movement")]
-    public float moveSpeed = 6f;
-    float movementMultiplier = 10f;
-    [SerializeField] float airMultiplier = 0.4f;
+    public float moveSpeed = 5f;
+    float movementMultiplier = 8f;
+    [SerializeField] float airMultiplier = 0.1f;
 
     [Header("Sprinting")]
     [SerializeField] float walkSpeed = 6f;

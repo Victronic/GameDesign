@@ -30,6 +30,19 @@ public abstract class ItemContainer : MonoBehaviour,IItemContainer
             itemSlots[i].OnDropEvent += slot => OnDropEvent(slot);
         }
     }
+
+    public bool isTome()
+    {
+        foreach(ItemSlot itemSlot in itemSlots)
+        {
+            if(itemSlot.Item != null)
+            {
+                if (itemSlot.Item.ItemName == "Tome")
+                    return true;
+            }
+        }
+        return false;
+    }
     public virtual bool CanAddItem(Item item, int amount = 1)
     {
         int freeSpace = 0;
