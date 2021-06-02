@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CheckTome : MonoBehaviour
 {
     [SerializeField] Inventory inventory;
@@ -16,7 +16,8 @@ public class CheckTome : MonoBehaviour
             adevarat = inventory.isTome();
             if (adevarat)
             {
-                Debug.Log("bine");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+                Cursor.visible = true;
             }
             else
                 Debug.Log("nu");

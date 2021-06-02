@@ -32,7 +32,7 @@ public class SpecialItemChest : MonoBehaviour
     private void Update()
     {
         ScoreManager scoreManager = scoreManagerObject.GetComponent<ScoreManager>();
-        if (isInRange && !isEmpty && Input.GetKeyDown(itemPickupKeycode) && scoreManager.score >10)
+        if (isInRange && !isEmpty && Input.GetKeyDown(itemPickupKeycode) && scoreManager.score >=200)
         {
             Item itemCopy = item.GetCopy();
             if (inventory.AddItem(itemCopy))
