@@ -18,7 +18,7 @@ public class ArrowReset : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             Shoot shoot = shootObj.GetComponent<Shoot>();
-            shoot.numberOfArrows = 4;
+            shoot.numberOfArrows = 20;
             scoreManager.score = 0;
         }
     }
