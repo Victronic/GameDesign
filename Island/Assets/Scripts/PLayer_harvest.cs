@@ -8,6 +8,7 @@ public class PLayer_harvest : MonoBehaviour
     public Transform hand;
     public float interactDist = 10f;
     public GameObject panel;
+    public GameObject meniu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,20 @@ public class PLayer_harvest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            meniu.SetActive(!meniu.activeSelf);
+            if (meniu.activeSelf == true)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
         DoInteraction();
         if (Input.GetKeyDown(KeyCode.V))
         {
