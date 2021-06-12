@@ -32,7 +32,9 @@ public class PLayer_harvest : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }
-        DoInteraction();
+
+        
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -46,25 +48,6 @@ public class PLayer_harvest : MonoBehaviour
                     panel.SetActive(!panel.activeSelf);
                 }
             }
-        }
-    }
-
-    private void DoInteraction()
-    {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if(Physics.Raycast(ray,out hit, interactDist))
-        {
-            if (hit.collider.tag == "Harvest")
-            {
-                if(Input.GetMouseButtonDown(0))
-                {
-                    Harvest currentHarvest = hit.collider.GetComponent<Harvest>();
-                    currentHarvest.HarvestResources(10f);
-                }
-            }
-
         }
     }
 }

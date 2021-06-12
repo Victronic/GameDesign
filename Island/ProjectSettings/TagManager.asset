@@ -8,6 +8,7 @@ TagManager:
   - Foundation_SP
   - Wall_SP
   - Ceiling_SP
+  - Destroyable
   layers:
   - Default
   - TransparentFX
