@@ -33,7 +33,6 @@ public class PLayer_harvest : MonoBehaviour
             }
         }
 
-        
 
         if (Input.GetKeyDown(KeyCode.V))
         {
