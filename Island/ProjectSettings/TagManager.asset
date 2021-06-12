@@ -9,7 +9,6 @@ TagManager:
   - Wall_SP
   - Ceiling_SP
   - Destroyable
-  - Grappleable
   layers:
   - Default
   - TransparentFX
