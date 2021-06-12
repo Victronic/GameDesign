@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 15897
+  controlID: 1044
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1015
     height: 731
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 15844
+  controlID: 1011
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 1015
     height: 454
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 15845
+  controlID: 1012
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 292}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 15898
+  controlID: 1045
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -444,10 +444,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 736}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 46fbffff94370000c4380000b63b00005e430000f8430000b84400006c490000
+      scrollPos: {x: 0, y: 244}
+      m_SelectedIDs: a83e0000
+      m_LastClickedID: 16040
+      m_ExpandedIDs: 54fbffff22440000ca440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -533,9 +533,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 153.47458, y: 14.014158, z: 11.656769}
+    m_Target: {x: -165.90732, y: 19.158731, z: -16.555687}
     speed: 2
-    m_Value: {x: 153.47458, y: 14.014158, z: 11.656769}
+    m_Value: {x: -165.90732, y: 19.158731, z: -16.555687}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -581,13 +581,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10118624, y: -0.79652774, z: 0.13903002, w: 0.57966876}
+    m_Target: {x: 0.29032233, y: -0.24172209, z: 0.076047644, w: 0.9227903}
     speed: 2
-    m_Value: {x: 0.10034822, y: -0.7999753, z: 0.13963182, w: 0.5748676}
+    m_Value: {x: -0.29032233, y: 0.24172209, z: -0.076047644, w: -0.9227902}
   m_Size:
-    m_Target: 7.835654
+    m_Target: -0.4325043
     speed: 2
-    m_Value: 7.4982333
+    m_Value: -0.4325043
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -651,20 +651,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Mechanics
+    - Assets/Scripts/ShootIsland
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Mechanics
+  - Assets/Scripts/ShootIsland
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\GitDesk\GameDesign\Island
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 308}
-    m_SelectedIDs: b4550000
-    m_LastClickedID: 21940
-    m_ExpandedIDs: 0000000056550000585500005a5500005c5500005e55000060550000625500006455000066550000685500006a5500006c5500006e55000070550000a455000000ca9a3b
+    scrollPos: {x: 0, y: 372}
+    m_SelectedIDs: 04560000
+    m_LastClickedID: 22020
+    m_ExpandedIDs: 0000000080550000825500008455000086550000885500008a5500008c5500008e55000090550000925500009455000096550000985500009a550000de55000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000056550000585500005a5500005c5500005e55000060550000625500006455000066550000685500006a5500006c5500006e5500007055000000ca9a3b
+    m_ExpandedIDs: 0000000080550000825500008455000086550000885500008a5500008c5500008e55000090550000925500009455000096550000985500009a55000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

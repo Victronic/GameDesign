@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public static ScoreManager instance;
     [SerializeField] Text scoreText;
+    [SerializeField] GameObject door1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,9 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         scoreText.text = "Points: " + score.ToString();
+        if (score > 300)
+        {
+            Destroy(door1);
+        }
     }
 }
